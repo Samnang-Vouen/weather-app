@@ -3,11 +3,12 @@ import Search from './Search';
 import CLocation from './CLocation';
 import './Styles/header.css';
 
-function Header() {
+function Header({getWeatherDetails}) {
+
   return (
     <div className="Header">
         <Mode/>
-        <Search/>
+        <Search getWeatherDetails={getWeatherDetails}/>
         <CLocation/>
     </div>
   )

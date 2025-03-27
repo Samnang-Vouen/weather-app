@@ -1,3 +1,14 @@
+:root {
+  --dark-color: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
+  font-family: Arial, sans-serif
+}
+
 /* Default (light mode) styles */
 .App-light {
   background-color: #ffffff;
@@ -10,4 +21,102 @@
   background-color: #1a1a1a;
   color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.time-container {
+  background-color: var(--dark-color);
+  text-align: center;
+  color: white;
+  width: 510px;
+  height: 330px;
+  border-radius: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#location {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+#time {
+  font-weight: 700;
+  font-size: 96px;
+}
+
+#date {
+  font-weight: 400;
+  font-size: 20px;
+}
+.detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 780px;
+  height: 330px;
+  border-radius: 30px;
+  background-color: var(--dark-color);
+  color: white;
+}
+.main-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#temp {
+  font-weight: 700;
+  font-size: 60px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#feel-like {
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+.sunrise, .sunset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.text {
+  font-size: 20px;
+}
+.time {
+  font-size: 16px;
+}
+.weather {
+  text-align: center;
+  font-size: 32px;
+  
+}
+.weather img {
+  width: 250px;
+}
+.weather p {
+  margin-bottom: 3rem;
+}
+.icons {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.extra-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.detail-value {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.detail-type {
+  font-weight: 500;
+  font-size: 16px;
 }
