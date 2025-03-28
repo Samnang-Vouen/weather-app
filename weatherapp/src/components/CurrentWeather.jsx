@@ -1,5 +1,5 @@
-import sunrise from "../assets/sunrise-white.png";
-import sunset from "../assets/sunset-white.png";
+import sunrise from "../assets/main-icons/sunrise-white 1.svg";
+import sunset from "../assets/main-icons/sunset-white 1.svg";
 
 export default function CurrentWeather({currentWeather}) {
     return (
