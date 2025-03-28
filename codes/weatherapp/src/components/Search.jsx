@@ -10,9 +10,8 @@ function Search({getWeatherDetails}){
         <div className="Search">
             <form action="#" className="search-form" onSubmit={handleSearch}>
                 <input type="text" placeholder="Search city" className="search-input"/>
+                <button type="submit">Search</button>
             </form>
-            
-            <button>Search</button>
         </div>
     )
 }
