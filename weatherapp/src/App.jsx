@@ -49,8 +49,8 @@ function App() {
       setCurrentWeather({
         temperature: Math.floor(data.main.temp),
         feelsLike: Math.floor(data.main.feels_like),
-        sunrise: convertUnixToTime(data.sys.sunrise),
-        sunset: convertUnixToTime(data.sys.sunset)
+        sunrise: convertUnixToTime(data.sys.sunrise, data.timezone),
+        sunset: convertUnixToTime(data.sys.sunset, data.timezone)
       });
 
       setSkyCondition({
@@ -72,17 +72,16 @@ function App() {
       console.log(error);
     }
   }
-  const convertUnixToTime = (unixTimestamp) => {
+  const convertUnixToTime = (unixTimestamp, timezoneOffset) => {
     if (!unixTimestamp) return "--"; // Handle undefined cases
-    const date = new Date(unixTimestamp * 1000); // Convert seconds to milliseconds
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
+    const utcTime = new Date(unixTimestamp * 1000); // Convert seconds to milliseconds
+    const localTime = new Date(utcTime.getTime() + timezoneOffset * 1000);
+    
+    const hours = localTime.getUTCHours(); // Get the correct local hour
+    const minutes = localTime.getUTCMinutes(); // Get the correct local minutes
+    const formattedTime = `${hours % 12 || 12}:${minutes.toString().padStart(2, '0')} ${hours >= 12 ? 'PM' : 'AM'}`;
 
-    const ampm = hours >= 12 ? "PM" : "AM";
-    const formattedHours = hours % 12 || 12; 
-    const formattedMinutes = minutes.toString().padStart(2, "0"); 
-
-    return `${formattedHours}:${formattedMinutes} ${ampm}`;
+    return formattedTime;
   };
 
   const dark = false;
@@ -93,7 +92,7 @@ function App() {
       <div className={`App-${dark ? 'dark' : 'light'}`}>
         <Header getWeatherDetails={getWeatherDetails}/>
         <Main/>
-        <Time currentCity={currentCity} />
+        <Time currentCity={currentCity} timezoneOffset={timezoneOffset}/>
         <WeatherDetail currentWeather={currentWeather} skyCondition={skyCondition} weatherData={weatherData}/>
       </div>
     </>

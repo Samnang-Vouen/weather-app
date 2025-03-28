@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function Time({currentCity}) {
+export default function Time({currentCity, timezoneOffset}) {
     const [time, setTime] = useState('');
     const [date, setDate] = useState('');
 
@@ -8,8 +8,10 @@ export default function Time({currentCity}) {
     useEffect(() => {
         const updateTimeAndDate = () => {
             const now = new Date();
-            const hours = now.getHours();
-            const minutes = now.getMinutes();
+            const localTime = new Date(now.getTime() + timezoneOffset * 1000);
+
+            const hours = localTime.getUTCHours();
+            const minutes = localTime.getUTCMinutes();
             const formattedTime = `${hours}:${minutes.toString().padStart(2, '0')}`;
             
             const dayOptions = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
@@ -23,7 +25,7 @@ export default function Time({currentCity}) {
         const intervalId = setInterval(updateTimeAndDate, 60000);  // Update time every minute
         
         return () => clearInterval(intervalId);  // Cleanup interval on component unmount
-    }, []);
+    }, [timezoneOffset]);
 
     return (
         <div className="time-container">
