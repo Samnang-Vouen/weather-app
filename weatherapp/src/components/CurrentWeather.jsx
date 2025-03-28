@@ -18,7 +18,7 @@ export default function CurrentWeather({currentWeather}) {
                     </div>
                     <div id="sunrise-text">
                         <p className="text">Sunrise</p>
-                        <p className="time">06:37 AM</p>
+                        <p className="time">{currentWeather.sunrise}</p>
                     </div>
                 </div>
                 <div className="sunset">
@@ -27,7 +27,7 @@ export default function CurrentWeather({currentWeather}) {
                     </div>
                     <div id="sunrise-text">
                         <p className="text">Sunset</p>
-                        <p className="time">20:37AM</p>
+                        <p className="time">{currentWeather.sunset}</p>
                     </div>
                 </div>
             </div>
