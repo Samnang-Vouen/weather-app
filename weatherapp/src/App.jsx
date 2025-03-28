@@ -3,6 +3,14 @@ import Main from './components/Main1'
 import Time from './components/Time';
 import WeatherDetail from './components/WeatherDetail';
 import { useState } from 'react';
+import clear from './assets/weather-icons/clear 1.svg';
+import clouds from './assets/weather-icons/clouds 2.svg';
+import drizzle from './assets/weather-icons/drizzle 2.svg';
+import haze from './assets/weather-icons/haze.png';
+import mist from './assets/weather-icons/mist 2.svg';
+import rain from './assets/weather-icons/rain 2.svg';
+import snow from './assets/weather-icons/snow.png';
+import thunderstorm from './assets/weather-icons/thunderstorm.png';
 
 function App() {
   const [weatherData, setWeatherData] = useState({});
