@@ -19,11 +19,33 @@ function App() {
   const [currentCity, setCurrentCity] = useState("");
   const [timezoneOffset, setTimezoneOffset] = useState(0);
 
+  const allIcons = {
+    "01d": clear,
+    "01n": clear,
+    "02d": clouds,
+    "02n": clouds,
+    "03d": clouds,
+    "03n": clouds,
+    "50d": mist,
+    "50n": mist,
+    "09d": rain,
+    "09n": rain,
+    "10d": rain,
+    "10n": rain,
+    "13d": snow,
+    "13n": snow,
+    "11d": thunderstorm,
+    "11n": thunderstorm,
+    "04d": drizzle,
+    "04n": drizzle
+  }
+
   const getWeatherDetails = async(API_URL) => {
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
 
+      const icons = allIcons[data.weather[0].icon] || clear;
       setCurrentWeather({
         temperature: Math.floor(data.main.temp),
         feelsLike: Math.floor(data.main.feels_like),
@@ -33,6 +55,7 @@ function App() {
 
       setSkyCondition({
         description: data.weather[0].description,
+        icon: icons
       });
       
       setWeatherData({
@@ -43,6 +66,7 @@ function App() {
 
       setCurrentCity(data.name);
       setTimezoneOffset(data.timezone);
+
       console.log(data);
     } catch (error) {
       console.log(error);

@@ -1,7 +1,7 @@
-import humidity from "../assets/humidity.png";
-import wind from "../assets/wind.png";
-import pressure from "../assets/pressure.png";
-import uv from "../assets/uv.png";
+import humidity from "../assets/main-icons/humidity 1.svg";
+import wind from "../assets/main-icons/wind 1.svg";
+import pressure from "../assets/main-icons/pressure-white 1.svg";
+import uv from "../assets/main-icons/uv-white 1.svg";
 
 export default function WeatherData({weatherData}) {
     return (
