@@ -1,42 +1,28 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+
+/* Ensure scrolling is enabled for the whole document */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Enable scrolling for the entire page */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Light Theme */
+.App-light {
+  background: linear-gradient(to bottom right, #333333, #000000); /* Black to Light Black */
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  /* Removed overflow: auto from here */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Dark Theme */
+.App-dark {
+  background: linear-gradient(to bottom right, #000000, #444444); /* Darker Black */
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  /* Removed overflow: auto from here */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
