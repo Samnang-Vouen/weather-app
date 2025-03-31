@@ -20,11 +20,11 @@ The **Weather App** is a web-based application that provides real-time weather u
 ---
 
 ## 🚀 Features
- 🌍 **City-Based Search:** Users can search for weather information by entering a city name.
- 📍 **Current Location Weather:** Automatically fetches and displays weather data for the user's current location.
- 🌡 **Real-Time Weather Data:** Displays temperature, humidity, wind speed, and weather conditions.
- 🎨 **User-Friendly Interface:** Simple and responsive design for a smooth user experience.
- ⚡ **Fast and Lightweight:** Optimized for quick data retrieval and minimal load times.
+ - 🌍 **City-Based Search:** Users can search for weather information by entering a city name.
+ - 📍 **Current Location Weather:** Automatically fetches and displays weather data for the user's current location.
+ - 🌡 **Real-Time Weather Data:** Displays temperature, humidity, wind speed, and weather conditions.
+ - 🎨 **User-Friendly Interface:** Simple and responsive design for a smooth user experience.
+ - ⚡ **Fast and Lightweight:** Optimized for quick data retrieval and minimal load times.
 
 ---
 
@@ -66,10 +66,10 @@ Ensure you have the following installed:
 ---
 
 ## 💡 Future Improvements
- 🌦 **7-Day Weather Forecast**: Adding weekly weather predictions.
- 🔔 **Weather Alerts**: Notifications for severe weather conditions.
- 🏙 **Multiple Cities Support**: Ability to save and track weather for multiple locations.
- 📱 **Mobile App Version**: Developing a native app for better mobile experience.
+ - 🌦 **7-Day Weather Forecast**: Adding weekly weather predictions.
+ - 🔔 **Weather Alerts**: Notifications for severe weather conditions.
+ - 🏙 **Multiple Cities Support**: Ability to save and track weather for multiple locations.
+ - 📱 **Mobile App Version**: Developing a native app for better mobile experience.
 
 ---
 
