@@ -66,10 +66,10 @@ Ensure you have the following installed:
 ---
 
 ## 💡 Future Improvements
-- 🌦 **7-Day Weather Forecast**: Adding weekly weather predictions.
-- 🔔 **Weather Alerts**: Notifications for severe weather conditions.
-- 🏙 **Multiple Cities Support**: Ability to save and track weather for multiple locations.
-- 📱 **Mobile App Version**: Developing a native app for better mobile experience.
+ 🌦 **7-Day Weather Forecast**: Adding weekly weather predictions.
+ 🔔 **Weather Alerts**: Notifications for severe weather conditions.
+ 🏙 **Multiple Cities Support**: Ability to save and track weather for multiple locations.
+ 📱 **Mobile App Version**: Developing a native app for better mobile experience.
 
 ---
 
