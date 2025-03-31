@@ -45,7 +45,7 @@ Ensure you have the following installed:
 ### Steps to Run Locally
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/weather-app.git](https://github.com/Samnang-Vouen/weather-app.git)
+   git clone https://github.com/Samnang-Vouen/weather-app.git
    cd weatherapp
    ```
 2. **Install dependencies**
