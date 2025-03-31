@@ -1,12 +1,11 @@
 import Mode from './Mode';
 import Search from './Search';
 import CLocation from './CLocation';
-import './Styles/header.css';
 
-function Header({ getWeatherDetails }) {
+function Header({ getWeatherDetails, isDarkMode, toggleTheme }) {
   return (
     <div className="Header">
-      <Mode />
+      <Mode isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
       <Search getWeatherDetails={getWeatherDetails} />
       <CLocation getWeatherDetails={getWeatherDetails} />
     </div>

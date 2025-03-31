@@ -16,7 +16,9 @@ function App() {
   const [skyCondition, setSkyCondition] = useState({});
   const [currentCity, setCurrentCity] = useState("");
   const [timezoneOffset, setTimezoneOffset] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   const allIcons = {
     "01d": clear,
@@ -63,6 +65,7 @@ function App() {
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         pressure: data.main.pressure,
+        visibility: data.visibility / 1000
       });
   
       setCurrentCity(data.name);
@@ -110,6 +113,7 @@ function App() {
         windSpeed: data.wind.speed,
         pressure: data.main.pressure,
       }));
+      console.log(data);
   
     } catch (error) {
       console.error("Error fetching weather data:", error.message);
@@ -127,11 +131,18 @@ function App() {
     return formattedTime;
   };
   
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      return newMode;
+    });
+  };
 
   return (
     <>
       <div className={isDarkMode ? 'App-dark' : 'App-light'}>
-        <Header getWeatherDetails={getWeatherDetails}/>
+        <Header getWeatherDetails={getWeatherDetails} isDarkMode={isDarkMode} toggleTheme={toggleTheme}/>
         <Main
           currentCity={currentCity}
           timezoneOffset={timezoneOffset}
