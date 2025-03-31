@@ -20,7 +20,7 @@ The **Weather App** is a web-based application that provides real-time weather u
 ---
 
 ## 🚀 Features
-- 🌍 **City-Based Search:** Users can search for weather information by entering a city name.
+ 🌍 **City-Based Search:** Users can search for weather information by entering a city name.
 - 📍 **Current Location Weather:** Automatically fetches and displays weather data for the user's current location.
 - 🌡 **Real-Time Weather Data:** Displays temperature, humidity, wind speed, and weather conditions.
 - 🎨 **User-Friendly Interface:** Simple and responsive design for a smooth user experience.
