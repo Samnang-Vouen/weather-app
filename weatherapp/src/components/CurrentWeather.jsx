@@ -5,16 +5,16 @@ export default function CurrentWeather({currentWeather}) {
     return (
         <div className="main-detail">         
             <div>
-                <p id="temp">{currentWeather.temperature}°C</p>
+                <p id="temp">{currentWeather.temperature || 0}°C</p>
                 <div id="feel-like">
                     <span style={{ fontSize: "20px" }}><strong>Feels like: </strong></span>
-                    <span style={{ fontSize: "32px" }}><strong> {currentWeather.feelsLike}°C</strong></span>
+                    <span style={{ fontSize: "32px" }}><strong> {currentWeather.feelsLike || 0}°C</strong></span>
                 </div>
             </div>
             <div>
                 <div className="sunrise">
                     <div id="sunrise-img">
-                        <img src={sunrise} alt="sunrise" />
+                        <img src={sunrise} alt="sunrise" className="sunrise-sunset"/>
                     </div>
                     <div id="sunrise-text">
                         <p className="text">Sunrise</p>
@@ -23,7 +23,7 @@ export default function CurrentWeather({currentWeather}) {
                 </div>
                 <div className="sunset">
                     <div id="sunset-img">
-                        <img src={sunset} alt="sunset" />
+                        <img src={sunset} alt="sunset" className="sunrise-sunset"/>
                     </div>
                     <div id="sunrise-text">
                         <p className="text">Sunset</p>

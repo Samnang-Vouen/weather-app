@@ -2,8 +2,8 @@
 export default function Sky({skyCondition}) {
     return (
         <div className="weather">
-            <img src={skyCondition.icon} alt="sunset"></img>
-            <p><strong>{skyCondition.description}</strong></p>
+            <img src={skyCondition.icon}></img>
+            <p><strong>{skyCondition.description || "current weather"}</strong></p>
         </div>
     );
 }
