@@ -27,11 +27,22 @@ export default function Time({currentCity, timezoneOffset}) {
         return () => clearInterval(intervalId);  // Cleanup interval on component unmount
     }, [timezoneOffset]);
 
+    const isDataAvailable = currentCity && timezoneOffset !== undefined && timezoneOffset !== null;
+
     return (
         <div className="time-container">
-            <p id="location">{currentCity}</p>
-            <p id="time">{time}</p>
-            <p id="date">{date}</p>
+            {isDataAvailable ? (
+                <>
+                    <p id="location">{currentCity}</p>
+                    <p id="time">{time}</p>
+                    <p id="date">{date}</p>
+                </>
+            ) : (
+                <div className="no-data-message">
+                    <h2>Current City</h2>
+                    <p>No current city available</p>
+                </div>
+            )}
         </div>
     );
 }

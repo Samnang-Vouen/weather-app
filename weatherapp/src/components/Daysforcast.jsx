@@ -3,7 +3,7 @@ export function DaysForecast({ data }) {
 
   return (
     <div className="five-days-forecast">
-      <h2>5 Days Forecast:</h2>
+      <h2>5 Days Forecast</h2>
       {forecastData.length > 0 ? (
         forecastData.map((day, index) => (
           <div key={index} className="forecast-item">
