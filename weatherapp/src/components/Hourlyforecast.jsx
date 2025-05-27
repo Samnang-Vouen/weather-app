@@ -6,7 +6,7 @@ function HourlyForecast({ hourlyForecast }) {
   const maxRotation = 360; // Full rotation in degrees
   return (
     <div className="hourly-forecast-container">
-      <h2>Hourly Forecast:</h2>
+      <h2>Hourly Forecast</h2>
       <div className="hourly-forecast-items">
         {!hourlyForecast || hourlyForecast.length === 0 ? (
           <p>No forecast data available.</p>
